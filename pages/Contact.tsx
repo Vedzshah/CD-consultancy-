@@ -36,8 +36,8 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-stone-50 min-h-screen py-20">
-      <div className="container mx-auto px-4">
+    <div className="bg-stone-50 min-h-screen py-24 lg:py-32">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Contact Us</h1>
@@ -145,7 +145,7 @@ const Contact: React.FC = () => {
 
                 {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
 
-                <button type="submit" disabled={isSubmitting} className="w-full bg-brand-600 text-white font-bold py-4 rounded-xl hover:bg-brand-500 disabled:bg-brand-400 transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                <button type="submit" disabled={isSubmitting} className="w-full bg-secondary text-white font-bold py-4 rounded-xl hover:bg-red-600 disabled:bg-red-400 transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2">
                   {isSubmitting ? 'Sending...' : 'Send Message'} {!isSubmitting && <Send size={18} />}
                 </button>
               </form>

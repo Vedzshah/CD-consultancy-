@@ -20,7 +20,7 @@ const Industries: React.FC = () => {
       {/* Header */}
       <div className="bg-brand-900 text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-brand-900 to-stone-900"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Industries Served</h1>
           <p className="text-xl text-brand-200 max-w-2xl mx-auto font-light">
             Versatile security and IT solutions adapted for diverse operational environments.
@@ -28,13 +28,13 @@ const Industries: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-6 lg:px-8 py-24 lg:py-32">
         {/* Intro Text */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Tailored Solutions for Every Sector</h2>
           <p className="text-slate-600 text-lg leading-relaxed">
-            CDCS understands that a hospital requires different security protocols than a manufacturing plant. 
-            We leverage our decades of experience to provide industry-specific implementations of Access Control, 
+            CDconsultancy understands that a hospital requires different security protocols than a manufacturing plant.
+            We leverage our decades of experience to provide industry-specific implementations of Access Control,
             Attendance Management, and Surveillance systems.
           </p>
         </div>
@@ -56,44 +56,44 @@ const Industries: React.FC = () => {
 
         {/* Why Us for Industries */}
         <div className="bg-white p-10 md:p-16 rounded-3xl shadow-xl border border-stone-100 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-6">Why Industries Trust CDCS</h3>
-                    <ul className="space-y-6">
-                        <li className="flex items-start gap-4">
-                            <div className="bg-brand-50 p-1 rounded-full text-brand-600 mt-1"><CheckCircle2 size={20} /></div>
-                            <div>
-                                <strong className="block text-slate-900 text-lg mb-1">Scalable Solutions</strong>
-                                <span className="text-slate-600 leading-relaxed">From single offices to large manufacturing complexes.</span>
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-4">
-                             <div className="bg-brand-50 p-1 rounded-full text-brand-600 mt-1"><CheckCircle2 size={20} /></div>
-                            <div>
-                                <strong className="block text-slate-900 text-lg mb-1">Integration</strong>
-                                <span className="text-slate-600 leading-relaxed">Seamlessly connecting hardware with software management.</span>
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-4">
-                             <div className="bg-brand-50 p-1 rounded-full text-brand-600 mt-1"><CheckCircle2 size={20} /></div>
-                            <div>
-                                <strong className="block text-slate-900 text-lg mb-1">Reliability</strong>
-                                <span className="text-slate-600 leading-relaxed">Proven track record with established names like Kanakia Constructions and Hyatt.</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div className="bg-brand-900 text-white p-10 rounded-2xl text-center shadow-lg">
-                    <h4 className="text-2xl font-bold mb-4">Need a Custom Solution?</h4>
-                    <p className="mb-8 text-stone-300 leading-relaxed">
-                        Our technical team is ready to assess your facility's specific requirements and design a tailored plan.
-                    </p>
-                    <a href="#/contact" className="inline-block bg-white text-brand-900 hover:bg-brand-50 font-bold py-3 px-8 rounded-lg transition-colors shadow-md">
-                        Request Site Visit
-                    </a>
-                </div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-slate-900 mb-6">Why Industries Trust CDconsultancy</h3>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                  <div className="bg-brand-50 p-1 rounded-full text-brand-600 mt-1"><CheckCircle2 size={20} /></div>
+                  <div>
+                    <strong className="block text-slate-900 text-lg mb-1">Scalable Solutions</strong>
+                    <span className="text-slate-600 leading-relaxed">From single offices to large manufacturing complexes.</span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="bg-brand-50 p-1 rounded-full text-brand-600 mt-1"><CheckCircle2 size={20} /></div>
+                  <div>
+                    <strong className="block text-slate-900 text-lg mb-1">Integration</strong>
+                    <span className="text-slate-600 leading-relaxed">Seamlessly connecting hardware with software management.</span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="bg-brand-50 p-1 rounded-full text-brand-600 mt-1"><CheckCircle2 size={20} /></div>
+                  <div>
+                    <strong className="block text-slate-900 text-lg mb-1">Reliability</strong>
+                    <span className="text-slate-600 leading-relaxed">Proven track record with established names like Kanakia Constructions and Hyatt.</span>
+                  </div>
+                </li>
+              </ul>
             </div>
+            <div className="bg-brand-900 text-white p-10 rounded-2xl text-center shadow-lg">
+              <h4 className="text-2xl font-bold mb-4">Need a Custom Solution?</h4>
+              <p className="mb-8 text-stone-300 leading-relaxed">
+                Our technical team is ready to assess your facility's specific requirements and design a tailored plan.
+              </p>
+              <a href="#/contact" className="inline-block bg-secondary text-white hover:bg-red-600 font-bold py-3 px-8 rounded-lg transition-colors shadow-md">
+                Request Consultation
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

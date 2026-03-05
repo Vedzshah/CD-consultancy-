@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="flex flex-col min-h-screen bg-stone-50 text-slate-800 font-sans">
       {/* Top Bar */}
       <div className="bg-brand-900 text-stone-300 py-2 text-xs font-medium tracking-wide border-b border-white/5">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2 hover:text-white transition-colors">
               <Phone size={14} className="text-brand-500" /> +91 9869022648
@@ -41,18 +41,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200 shadow-sm transition-all duration-300">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               {/* Logo Image: Ensure 'logo.png' is placed in your public directory */}
               <img
                 src="/logo.png"
-                alt="CDCS Logo"
+                alt="CDconsultancy Logo"
                 className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-slate-900 leading-none tracking-tight group-hover:text-brand-600 transition-colors">CDCS</span>
+                <span className="text-xl font-bold text-slate-900 leading-none tracking-tight group-hover:text-brand-600 transition-colors">CDconsultancy</span>
                 <span className="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1">CD Consultancy & Services</span>
               </div>
             </Link>
@@ -74,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="ml-4 pl-4 border-l border-stone-200">
                 <Link
                   to="/contact"
-                  className="bg-brand-600 text-white px-6 py-2.5 rounded-lg text-sm font-semibold shadow-md shadow-brand-500/20 hover:bg-brand-500 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
+                  className="bg-secondary text-white px-6 py-2.5 rounded-lg text-sm font-semibold shadow-md shadow-secondary/20 hover:bg-red-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
                 >
                   Get Quote <ArrowRight size={16} />
                 </Link>
@@ -110,7 +110,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               ))}
               <Link
                 to="/contact"
-                className="block mt-4 text-center bg-brand-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-brand-500"
+                className="block mt-4 text-center bg-secondary text-white px-4 py-3 rounded-lg font-semibold hover:bg-red-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Quote
@@ -127,14 +127,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Footer */}
       <footer className="bg-brand-900 text-stone-400 py-16 border-t border-stone-800">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <div className="space-y-6">
               <div className="flex items-center gap-3 text-white">
                 <div className="bg-white/5 p-2 rounded-lg border border-white/10">
-                  <img src="/logo.png" alt="CDCS Logo" className="h-8 w-auto" />
+                  <img src="/logo.png" alt="CDconsultancy Logo" className="h-8 w-auto" />
                 </div>
-                <span className="text-xl font-bold tracking-tight">CDCS</span>
+                <span className="text-xl font-bold tracking-tight">CDconsultancy</span>
               </div>
               <p className="text-sm leading-relaxed text-stone-400">
                 Providing end-to-end IT, hardware, software, and security solutions since 1993. Your trusted partner in safety and efficiency.
@@ -165,15 +165,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0 text-brand-500" />
-                  <span>Corporate Office, Mumbai, India</span>
+                  <span>1, Ruxmani Niwas, Subhash Lane, Daftary Road, Malad East, B/H Solanki Sadan, Malad East, Mumbai, Maharashtra 400097</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} className="text-brand-500" />
-                  <a href="tel:+911234567890" className="hover:text-white transition-colors">+91 123 456 7890</a>
+                  <a href="tel:+919869022648" className="hover:text-white transition-colors">+91 9869022648</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail size={18} className="text-brand-500" />
-                  <a href="mailto:sales@cdcs.example.com" className="hover:text-white transition-colors">sales@cdcs.example.com</a>
+                  <a href="mailto:cdconsultancy@gmail.com" className="hover:text-white transition-colors">cdconsultancy@gmail.com</a>
                 </li>
               </ul>
             </div>

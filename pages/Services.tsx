@@ -53,8 +53,8 @@ const services: ServiceItem[] = [
 
 const Services: React.FC = () => {
   return (
-    <div className="bg-stone-50 min-h-screen py-20">
-      <div className="container mx-auto px-4">
+    <div className="bg-stone-50 min-h-screen py-24 lg:py-32">
+      <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
           <span className="text-brand-600 font-bold tracking-widest uppercase text-xs mb-3 block">What We Do</span>
@@ -95,7 +95,7 @@ const Services: React.FC = () => {
               <p className="text-brand-100 mb-10 text-lg leading-relaxed">
                 Our technical team is ready to provide pre-sales advice to help you select the perfect system for your facility.
               </p>
-              <a href="#/contact" className="inline-flex items-center gap-2 bg-white text-brand-900 hover:bg-brand-50 font-bold py-4 px-10 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
+              <a href="#/contact" className="inline-flex items-center gap-2 bg-secondary text-white hover:bg-red-600 font-bold py-4 px-10 rounded-xl transition-all shadow-lg transform hover:-translate-y-1">
                 Contact Our Technical Team <ArrowRight size={20} />
               </a>
             </div>

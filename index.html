@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CD Consultancy & Services | IT & Security Solutions</title>
-    <meta name="description" content="Established in 1993, CDCS provides expert IT, hardware, and security solutions including Attendance Management, Access Control, and CCTV Surveillance." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: '#fff7ed',  // Orange 50
-                100: '#ffedd5', // Orange 100
-                200: '#fed7aa', // Orange 200
-                500: '#f97316', // Orange 500 (Primary)
-                600: '#ea580c', // Orange 600
-                700: '#c2410c', // Orange 700
-                800: '#9a3412', // Orange 800
-                900: '#1c1917', // Stone 900 (Dark Warm Grey for professional contrast)
-                950: '#431407', // Deep Brown/Orange
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CD Consultancy & Services | IT & Security Solutions</title>
+  <meta name="description"
+    content="Established in 1993, CDconsultancy provides expert IT, hardware, and security solutions including Attendance Management, Access Control, and CCTV Surveillance." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f8fafc',  // Slate 50 Neutral
+              100: '#f1f5f9', // Slate 100 Neutral
+              200: '#e2e8f0', // Slate 200 Neutral
+              500: '#0000FF', // Primary Blue
+              600: '#0000CC', // Primary Blue darker
+              700: '#000099', // Primary Blue darker
+              800: '#1e293b', // Slate 800
+              900: '#0f172a', // Slate 900 Neutral for contrast
+              950: '#020617', // Slate 950
             },
-            fontFamily: {
-              sans: ['Inter', 'system-ui', 'sans-serif'],
-            }
+            primary: '#0000FF',
+            secondary: '#FF0000',
+          },
+          fontFamily: {
+            sans: ['"Californian FB"', 'serif'],
           }
         }
       }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body { font-family: 'Inter', sans-serif; }
-    </style>
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Californian FB', serif;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -46,10 +54,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
