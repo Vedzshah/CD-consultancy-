@@ -15,7 +15,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Industries', path: '/industries' },
-    { name: 'Clients', path: '/clients' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -28,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2 hover:text-white transition-colors">
-              <Phone size={14} className="text-brand-500" /> +91 9969202648
+              <Phone size={14} className="text-brand-500" /> +91 9869022648
             </span>
             <span className="flex items-center gap-2 hover:text-white transition-colors">
               <Mail size={14} className="text-brand-500" /> cdconsultancy@gmail.com
@@ -157,7 +156,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <ul className="space-y-3 text-sm">
                 <li><Link to="/about" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">About Us</Link></li>
                 <li><Link to="/industries" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">Industries Served</Link></li>
-                <li><Link to="/clients" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">Our Clients</Link></li>
                 <li><Link to="/contact" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">Contact Us</Link></li>
               </ul>
             </div>
