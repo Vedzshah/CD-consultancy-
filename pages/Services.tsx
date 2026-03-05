@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScanBarcode, CreditCard, UserCheck, Lock, Video, Database, MonitorPlay, Fingerprint, ArrowRight } from 'lucide-react';
+import { ScanBarcode, CreditCard, UserCheck, Lock, Video, Database, MonitorPlay, Fingerprint, ArrowRight, IdCard } from 'lucide-react';
 import { ServiceItem } from '../types';
 import { motion } from 'framer-motion';
 
@@ -38,6 +38,11 @@ const services: ServiceItem[] = [
     title: 'CCTV Surveillance',
     description: 'High-definition video surveillance systems for round-the-clock security monitoring.',
     icon: Video
+  },
+  {
+    title: 'ID Cards',
+    description: 'We provide high-quality ID cards for schools, colleges, corporate offices.',
+    icon: IdCard
   },
   {
     title: 'Online Recording & Monitoring',
