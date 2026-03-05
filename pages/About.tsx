@@ -15,7 +15,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-brand-500 font-bold tracking-wider uppercase text-sm mb-4 block">Our Story</span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">About CDconsultancy</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">About CDCS</h1>
             <p className="text-xl text-brand-100 max-w-2xl mx-auto font-light leading-relaxed">
               Delivering Excellence in Security & IT Solutions Since 1993
             </p>
@@ -36,7 +36,7 @@ const About: React.FC = () => {
             </h2>
             <div className="prose prose-lg text-slate-600">
               <p className="mb-6">
-                CD Consultancy & Services (CDconsultancy) was established in 1993 and has since grown into a premier provider of IT, hardware, software, and security solutions.
+                CD Consultancy & Services (CDCS) was established in 1993 and has since grown into a premier provider of IT, hardware, software, and security solutions.
               </p>
               <p>
                 We specialize in critical business infrastructure including Attendance Management, Access Control, and comprehensive Security Systems. Our goal is to deliver technology that empowers your organization to operate safely and efficiently.
@@ -98,7 +98,7 @@ const About: React.FC = () => {
           <div className="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm text-brand-600">
             <Award size={40} />
           </div>
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">The CDconsultancy Difference</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">The CDCS Difference</h2>
           <p className="text-lg text-slate-700 leading-relaxed font-medium">
             At CD Consultancy & Services, we believe that technology is only as effective as the support behind it.
             Our <span className="text-brand-700">trained and experienced technical team</span> ensures that every solution—whether it's

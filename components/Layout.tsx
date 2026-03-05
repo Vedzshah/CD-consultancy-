@@ -27,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2 hover:text-white transition-colors">
-              <Phone size={14} className="text-brand-500" /> +91 9869022648
+              <Phone size={14} className="text-brand-500" /> +91 9869022648 / +91 9969570135
             </span>
             <span className="flex items-center gap-2 hover:text-white transition-colors">
               <Mail size={14} className="text-brand-500" /> cdconsultancy@gmail.com
@@ -48,11 +48,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Logo Image: Ensure 'logo.png' is placed in your public directory */}
               <img
                 src="/logo.png"
-                alt="CDconsultancy Logo"
+                alt="CDCS Logo"
                 className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-slate-900 leading-none tracking-tight group-hover:text-brand-600 transition-colors">CDconsultancy</span>
+                <span className="text-xl font-bold text-slate-900 leading-none tracking-tight group-hover:text-brand-600 transition-colors">CDCS</span>
                 <span className="text-[10px] text-slate-500 font-semibold tracking-widest uppercase mt-1">CD Consultancy & Services</span>
               </div>
             </Link>
@@ -132,9 +132,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="space-y-6">
               <div className="flex items-center gap-3 text-white">
                 <div className="bg-white/5 p-2 rounded-lg border border-white/10">
-                  <img src="/logo.png" alt="CDconsultancy Logo" className="h-8 w-auto" />
+                  <img src="/logo.png" alt="CDCS Logo" className="h-8 w-auto" />
                 </div>
-                <span className="text-xl font-bold tracking-tight">CDconsultancy</span>
+                <span className="text-xl font-bold tracking-tight">CDCS</span>
               </div>
               <p className="text-sm leading-relaxed text-stone-400">
                 Providing end-to-end IT, hardware, software, and security solutions since 1993. Your trusted partner in safety and efficiency.
@@ -169,11 +169,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} className="text-brand-500" />
-                  <a href="tel:+919869022648" className="hover:text-white transition-colors">+91 9869022648</a>
+                  <a href="tel:+919869022648" className="hover:text-white transition-colors">+91 9869022648 / +91 9969570135</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail size={18} className="text-brand-500" />
-                  <a href="mailto:cdconsultancy@gmail.com" className="hover:text-white transition-colors">cdconsultancy@gmail.com</a>
+                  <a href="mailto:cdconsultancy@gmail.com " className="hover:text-white transition-colors">cdconsultancy@gmail.com </a>
                 </li>
               </ul>
             </div>

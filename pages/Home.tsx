@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <section className="relative bg-brand-900 text-white overflow-hidden min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-brand-900/95 to-brand-800/80 z-10"></div>
-          <img src="https://picsum.photos/1920/1080?random=1" alt="Background" className="w-full h-full object-cover grayscale opacity-50" />
+          <img src="access.png" alt="Background" className="w-full h-full object-cover grayscale opacity-50" />
         </div>
         <div className="container mx-auto px-6 lg:px-8 py-24 lg:py-32 relative z-20">
           <motion.div
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
               Advanced Security & <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-200">IT Solutions</span> for Business
+              IT Solutions for Business
             </h1>
             <p className="text-lg md:text-xl text-stone-300 mb-10 max-w-2xl leading-relaxed font-light">
               From end-to-end technology implementation to robust security systems,
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-block border border-stone-700 bg-stone-800/50 rounded-full px-4 py-1 text-sm text-brand-400 font-medium mb-6">
-                Why CDconsultancy?
+                Why CDCS?
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
                 Decades of Experience,<br />Unmatched Reliability.
@@ -132,9 +132,7 @@ const Home: React.FC = () => {
             </div>
             <div className="relative lg:h-[600px]">
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-500 to-brand-700 rounded-3xl transform rotate-3 opacity-20 blur-sm"></div>
-              <img
-                src="https://picsum.photos/600/800?random=2"
-                alt="Technical Team"
+              <img src="access.png" alt="Technical Team"
                 className="relative rounded-3xl shadow-2xl w-full h-full object-cover border-4 border-stone-800"
               />
             </div>
