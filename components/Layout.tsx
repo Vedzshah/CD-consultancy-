@@ -132,7 +132,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="space-y-6">
               <div className="flex items-center gap-3 text-white">
                 <div className="bg-white/5 p-2 rounded-lg border border-white/10">
-                  <img src="/logo.png" alt="CDCS Logo" className="h-8 w-auto brightness-200 grayscale contrast-200" />
+                  <img src="/logo.png" alt="CDCS Logo" className="h-8 w-auto" />
                 </div>
                 <span className="text-xl font-bold tracking-tight">CDCS</span>
               </div>
