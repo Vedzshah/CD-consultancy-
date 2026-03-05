@@ -3,12 +3,36 @@ import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle2 } from 'lucide-reac
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate submission
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setIsSubmitting(true);
+    setError('');
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 5000);
+        e.currentTarget.reset();
+      } else {
+        setError(data.message || "Something went wrong.");
+      }
+    } catch (err) {
+      setError("Failed to submit the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -90,23 +114,23 @@ const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
-                    <input type="text" id="name" required placeholder="John Doe" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
+                    <input type="text" id="name" name="name" required placeholder="John Doe" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                    <input type="email" id="email" required placeholder="john@example.com" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
+                    <input type="email" id="email" name="email" required placeholder="john@example.com" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-2">Interested Service</label>
                   <div className="relative">
-                    <select id="subject" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all appearance-none text-slate-600">
-                      <option>Access Control Systems</option>
-                      <option>Attendance Management</option>
-                      <option>CCTV Surveillance</option>
-                      <option>Biometric Systems</option>
-                      <option>Other</option>
+                    <select id="subject" name="subject" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all appearance-none text-slate-600">
+                      <option value="Access Control Systems">Access Control Systems</option>
+                      <option value="Attendance Management">Attendance Management</option>
+                      <option value="CCTV Surveillance">CCTV Surveillance</option>
+                      <option value="Biometric Systems">Biometric Systems</option>
+                      <option value="Other">Other</option>
                     </select>
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-stone-400">
                       <ArrowRight size={16} className="rotate-90" />
@@ -116,11 +140,13 @@ const Contact: React.FC = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
-                  <textarea id="message" rows={5} placeholder="Tell us about your project requirements..." className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400 resize-none"></textarea>
+                  <textarea id="message" name="message" required rows={5} placeholder="Tell us about your project requirements..." className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400 resize-none"></textarea>
                 </div>
 
-                <button type="submit" className="w-full bg-brand-600 text-white font-bold py-4 rounded-xl hover:bg-brand-500 transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                  Send Message <Send size={18} />
+                {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
+
+                <button type="submit" disabled={isSubmitting} className="w-full bg-brand-600 text-white font-bold py-4 rounded-xl hover:bg-brand-500 disabled:bg-brand-400 transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                  {isSubmitting ? 'Sending...' : 'Send Message'} {!isSubmitting && <Send size={18} />}
                 </button>
               </form>
             )}
