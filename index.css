@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f8fafc;
+  --color-brand-100: #f1f5f9;
+  --color-brand-200: #e2e8f0;
+  --color-brand-500: #0000FF;
+  --color-brand-600: #0000CC;
+  --color-brand-700: #1a1a7a;
+  --color-brand-800: #1e293b;
+  --color-brand-900: #0f172a;
+  --color-brand-950: #020617;
+  --color-primary: #0000FF;
+  --color-secondary: #FF0000;
+  --font-sans: "Californian FB", "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: 'Californian FB';
+  src: local('Californian FB'), local('CalifornianFB');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Californian FB', serif;
+}
