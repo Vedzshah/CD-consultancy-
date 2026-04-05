@@ -2,6 +2,7 @@ import React from 'react';
 import { ScanBarcode, CreditCard, UserCheck, Lock, Video, Database, MonitorPlay, Fingerprint, ArrowRight, IdCard } from 'lucide-react';
 import { ServiceItem } from '../types';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 const services: ServiceItem[] = [
   {
@@ -54,6 +55,12 @@ const services: ServiceItem[] = [
 const Services: React.FC = () => {
   return (
     <div className="bg-stone-50 min-h-screen py-24 lg:py-32">
+      <SEO
+        title="Our Services — Biometric, Access Control & CCTV Solutions"
+        description="CDCS offers end-to-end security services in Mumbai: Biometric Attendance, RFID Access Control, CCTV Surveillance, Barcode Solutions, Smart Cards, and Online Monitoring. request a quote today."
+        keywords="biometric attendance Mumbai, access control systems, CCTV surveillance Mumbai, RFID smart cards, barcode solutions, security services India"
+        canonicalUrl="https://cdcs.co.in/services"
+      />
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">

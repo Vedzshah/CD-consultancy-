@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, ArrowRight, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -37,6 +38,12 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-stone-50 min-h-screen py-24 lg:py-32">
+      <SEO
+        title="Contact Us — Get a Free Security Consultation in Mumbai"
+        description="Contact CD Consultancy & Services for expert security and IT advice. Located in Malad East, Mumbai. Call +91 9869022648 or email cdconsultancy@gmail.com to request a free quote."
+        keywords="contact CDCS Mumbai, security consultation Mumbai, access control quote, CCTV installation Mumbai, biometric system Malad East"
+        canonicalUrl="https://cdcs.co.in/contact"
+      />
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

@@ -1,10 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Users, Award, History, Headphones, Settings } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const About: React.FC = () => {
   return (
     <div className="bg-white">
+      <SEO
+        title="About Us — 30+ Years of Security & IT Expertise"
+        description="Learn about CD Consultancy & Services (CDCS), established in 1993. We are a trusted Mumbai-based provider of end-to-end IT, biometric, and security infrastructure with decades of proven excellence."
+        keywords="about CDCS, CD Consultancy Services Mumbai, security company 1993, IT solutions provider Mumbai, biometric company India"
+        canonicalUrl="https://cdcs.co.in/about"
+      />
       {/* Hero / Header */}
       <div className="bg-brand-900 relative overflow-hidden py-24">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>

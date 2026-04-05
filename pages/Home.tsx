@@ -2,10 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Shield, Clock, Users, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO
+        title="Advanced Security & IT Solutions Since 1993"
+        description="CD Consultancy & Services (CDCS) — Premier IT, hardware, biometric, and security solution provider in Mumbai since 1993. Expert in Attendance Management, Access Control, and CCTV Surveillance."
+        keywords="security solutions Mumbai, access control systems, CCTV surveillance, biometric attendance, IT solutions Mumbai, CDCS"
+        canonicalUrl="https://cdcs.co.in/"
+      />
       {/* Hero Section */}
       <section className="relative bg-brand-900 text-white overflow-hidden min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">

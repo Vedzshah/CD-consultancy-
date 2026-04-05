@@ -1,5 +1,6 @@
 import React from 'react';
 import { Stethoscope, Factory, PhoneCall, GraduationCap, ShoppingBag, Briefcase, Hotel, HardHat, RadioTower, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const industries = [
   { name: 'Hospitals', icon: Stethoscope },
@@ -17,6 +18,12 @@ const industries = [
 const Industries: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
+      <SEO
+        title="Industries Served — Security Solutions for Every Sector"
+        description="CDCS provides tailored security and IT solutions to Hospitals, Corporate Offices, Hotels, Retail, Manufacturing, Educational Institutions, and more across India."
+        keywords="security solutions hospitals Mumbai, corporate office access control, CCTV hotel surveillance, manufacturing attendance system, educational institution biometric"
+        canonicalUrl="https://cdcs.co.in/industries"
+      />
       {/* Header */}
       <div className="bg-brand-900 text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-brand-900 to-stone-900"></div>
