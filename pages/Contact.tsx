@@ -12,8 +12,8 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     setError('');
 
-    // Save form ref BEFORE any await — React nullifies e.currentTarget after
-    // the synchronous handler returns, causing e.currentTarget.reset() to throw
+    // Save form ref BEFORE any await — React nullifies e.currentTarget
+    // when the synchronous handler returns on the first await
     const form = e.currentTarget;
 
     const formData = new FormData(form);
@@ -25,19 +25,18 @@ const Contact: React.FC = () => {
         body: formData
       });
 
-      if (!response.ok) {
-        throw new Error(`Server error: ${response.status}`);
-      }
-
+      // Always read the JSON body — Web3Forms may return non-200 even on success;
+      // the only reliable indicator is the 'success' field in the response body
       const data = await response.json();
 
       if (data.success) {
         setSubmitted(true);
-        form.reset();
+        form?.reset();
       } else {
         setError(data.message || "Something went wrong. Please try again.");
       }
     } catch (err) {
+      console.error("Form submission error:", err);
       setError("Failed to submit the form. Please check your connection and try again.");
     } finally {
       setIsSubmitting(false);
