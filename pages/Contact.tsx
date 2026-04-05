@@ -12,7 +12,11 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     setError('');
 
-    const formData = new FormData(e.currentTarget);
+    // Save form ref BEFORE any await — React nullifies e.currentTarget after
+    // the synchronous handler returns, causing e.currentTarget.reset() to throw
+    const form = e.currentTarget;
+
+    const formData = new FormData(form);
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "");
 
     try {
@@ -20,17 +24,21 @@ const Contact: React.FC = () => {
         method: "POST",
         body: formData
       });
+
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
       const data = await response.json();
 
       if (data.success) {
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 5000);
-        e.currentTarget.reset();
+        form.reset();
       } else {
-        setError(data.message || "Something went wrong.");
+        setError(data.message || "Something went wrong. Please try again.");
       }
     } catch (err) {
-      setError("Failed to submit the form. Please try again.");
+      setError("Failed to submit the form. Please check your connection and try again.");
     } finally {
       setIsSubmitting(false);
     }
