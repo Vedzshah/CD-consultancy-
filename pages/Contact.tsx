@@ -144,6 +144,7 @@ const Contact: React.FC = () => {
                       <option value="Attendance Management">Attendance Management</option>
                       <option value="CCTV Surveillance">CCTV Surveillance</option>
                       <option value="Biometric Systems">Biometric Systems</option>
+                      <option value="Personalized Id Cards & All printed Solution">Personalized Id Cards & All printed Solution</option>
                       <option value="Other">Other</option>
                     </select>
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-stone-400">
