@@ -128,11 +128,11 @@ const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
+                    <input type="text" id="name" name="name" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="john@example.com" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
+                    <input type="email" id="email" name="email" className="w-full px-5 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all placeholder:text-stone-400" />
                   </div>
                 </div>
 
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
                       <option value="Attendance Management">Attendance Management</option>
                       <option value="CCTV Surveillance">CCTV Surveillance</option>
                       <option value="Biometric Systems">Biometric Systems</option>
-                      <option value="Personalized Id Cards & All printed Solution">Personalized Id Cards & All printed Solution</option>
+                      <option value="Personalized Id Cards & All printing Solution">Personalized Id Cards & All printing Solution</option>
                       <option value="Other">Other</option>
                     </select>
                     <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-stone-400">

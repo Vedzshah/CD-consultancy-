@@ -148,7 +148,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li><Link to="/services" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">CCTV Surveillance</Link></li>
                 <li><Link to="/services" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">Biometric Systems</Link></li>
                 <li><Link to="/services" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">Attendance Management</Link></li>
-                <li><Link to="/services" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">Personalized Id Cards & All printed Solution</Link></li>
+                <li><Link to="/services" className="hover:text-brand-400 hover:translate-x-1 transition-all inline-block">Personalized Id Cards & All printing Solution</Link></li>
               </ul>
             </div>
 
